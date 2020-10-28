@@ -24,6 +24,10 @@ public class Tester {
         System.out.println(testAcct.withdraw(4));       // false since current balance is 0, can't withdraw more than balance
         System.out.println(testAcct.deposit(45.5));     // true
         System.out.println(testAcct.withdraw(42));      // true
+        */
+
+        /* tests for toString()
+        System.out.println(testAcct.deposit(3.5));      // true
         System.out.println(testAcct.getBalance());      // return 3.5
         System.out.println(testAcct.toString());        // return 95    3.5 (the space is a tab)
         */

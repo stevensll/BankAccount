@@ -30,6 +30,12 @@ public class BankAccount {
         } else return false;
     }
     public String toString() {
-        return String.valueOf(accountID) + "\t" + String.valueOf(balance);
+        return "#"+ String.valueOf(accountID) + "\t" + "$" + String.valueOf(balance);
+    }
+    private boolean authenticate(String password){
+        return password.equals(this.password);
+    }
+    public boolean transferTo(BankAccount other, double amount, String password){
+        return withdraw(amount) && other.deposit(amount) && authenticate(password);
     }
 }
