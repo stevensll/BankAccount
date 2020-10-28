@@ -4,5 +4,9 @@ public class Tester {
         System.out.println(testAcct.getBalance());
         System.out.println(testAcct.getAccountID());
         testAcct.setPassword("somenewpassword");
+        System.out.println(testAcct.deposit(-5.23));
+        System.out.println(testAcct.getBalance());
+        System.out.println(testAcct.deposit(5.23));
+        System.out.println(testAcct.getBalance());
     }
 }
