@@ -1,6 +1,6 @@
 public class Tester {
     public static void main (String[] args) {
-        BankAccount testAcct = new BankAccount(95, "somepassword");
+        BankAccount testAcct = new BankAccount(1, "somepassword");
         // to test each case just replace * with /
         
         /* tests for getBalance() and getAccountID()
@@ -31,5 +31,16 @@ public class Tester {
         System.out.println(testAcct.getBalance());      // return 3.5
         System.out.println(testAcct.toString());        // return 95    3.5 (the space is a tab)
         */
+
+        // tests for authenticate() and transferTo()
+        BankAccount testAcct2 = new BankAccount(2,"password2");
+        System.out.println(testAcct.transferTo(testAcct2, 35, "somepassword")); // false because current balance of testAcct= 0;
+        testAcct.deposit(35);
+        System.out.println(testAcct.toString());    //$35.0
+        System.out.println(testAcct2.toString());   //$0.0
+        System.out.println(testAcct.transferTo(testAcct2, 35, "somepassword")); // true because current balacne of testAcct is now 35;
+        System.out.println(testAcct.toString());    //$0.0
+        System.out.println(testAcct2.toString());   //$35.0
+        //
     }
 }
